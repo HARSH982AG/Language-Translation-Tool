@@ -14,8 +14,9 @@ body {
     padding: 30px;
     border-radius: 12px;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
-    width: 320px;
-    max-width: 90%;
+    width: 100%; /* Use full width */
+    max-width: 480px; /* Maximum width for larger screens */
+    margin: 0 20px; /* Margin for smaller screens */
 }
 
 textarea {
@@ -68,74 +69,25 @@ button:hover {
 
 button:active {
     transform: translateY(0); /* Reset lift effect on click */
-}body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background-color: #e0e7ff; /* Light blue background */
-    margin: 0;
-    padding: 0;
 }
 
-.container {
-    background: white;
-    padding: 30px;
-    border-radius: 12px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
-    width: 320px;
-    max-width: 90%;
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .container {
+        padding: 20px; /* Reduce padding on smaller screens */
+    }
+
+    textarea, select, button {
+        font-size: 14px; /* Standard font size for tablets */
+    }
 }
 
-textarea {
-    width: 100%;
-    height: 120px;
-    margin-bottom: 15px;
-    padding: 12px;
-    border: 1px solid #aaa;
-    border-radius: 6px;
-    box-sizing: border-box;
-    font-size: 14px;
-    transition: border-color 0.3s ease;
-}
+@media (max-width: 600px) {
+    .container {
+        padding: 15px; /* Further reduce padding on mobile */
+    }
 
-textarea:focus {
-    border-color: #5c6bc0; /* Focus border color */
-    outline: none;
-}
-
-select, button {
-    width: 100%;
-    padding: 12px;
-    margin-bottom: 15px;
-    border: 1px solid #aaa;
-    border-radius: 6px;
-    cursor: pointer;
-    box-sizing: border-box;
-    font-size: 14px;
-    transition: border-color 0.3s ease;
-}
-
-select:focus, button:focus {
-    border-color: #5c6bc0; /* Focus border color */
-    outline: none;
-}
-
-button {
-    background-color: #3f51b5; /* Primary button color */
-    color: white;
-    border: none;
-    font-size: 16px;
-    font-weight: bold;
-    transition: background-color 0.3s ease, transform 0.2s ease;
-}
-
-button:hover {
-    background-color: #303f9f; /* Darker shade on hover */
-    transform: translateY(-2px); /* Slight lift effect */
-}
-
-button:active {
-    transform: translateY(0); /* Reset lift effect on click */
+    textarea, select, button {
+        font-size: 12px; /* Smaller font size for mobile */
+    }
 }
