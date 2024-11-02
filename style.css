@@ -89,5 +89,5 @@ button:active {
 
     textarea, select, button {
         font-size: 12px; /* Smaller font size for mobile */
-    }
+}
 }
